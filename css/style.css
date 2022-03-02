@@ -1,0 +1,36 @@
+/*
+  Crear una grid sin Media Queries
+  Mediante el uso de la funcion var establecemos el valor mínimo de los elementos
+*/
+.auto-grid {
+    /* Con var establecemos cual es el valor mínimo que tendrán los elementos para luego
+    usar en la funcion minmax */
+    --auto-grid-min-size: 15rem;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
+  }
+  
+  
+  /* Estilos a la lista de elementos */
+  
+  body {
+    background: #efefef;
+    padding: 1rem;
+    line-height: 1.4;
+    font-family: sans-serif;
+  }
+  
+  li {
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    background: #eb4d4b;
+    color: #ffffff;
+    list-style: none;
+  }
+
+  *{
+    margin: 0;
+  }
